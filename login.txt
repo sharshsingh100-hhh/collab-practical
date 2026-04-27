@@ -6,19 +6,26 @@ Step 1: Create a Repository on GitHub
 4. Create the repository and copy the HTTPS URL.
 
 Step 2: Clone Repository to Local Machine
-git clone https://github.com/<your-username>/collab-practical.git
+git clone https://github.com/<your-usern>/collab-practical.git
 cd collab-practical
 
 Step 3: Configure Git (First Time Only)
-git config --global user.name "Your Name"
-git config --global user.email "youremail@example.com"
+git config --global user.name "harshsinghh"
+git config --global user.email "sharshsingh010@example.com"
 
 Step 4: Create a Branch and Push Code
 git checkout -b feature-login
 echo "Login feature added" > login.txt
-git add .
+git add 
 git commit -m "Add login feature"
 git push origin feature-login
+ echo "# harshsinghh" >> README.md
+git init
+git add README.md
+$ git commit -m "first commit"
+$ git branch -m main
+$ git remote add origin URL
+$ git remote add origin https://github.com/sharshsingh100-hhh/harshsingh.git
 
 Step 5: Create Pull Request (PR)
 1. Open the repository on GitHub.

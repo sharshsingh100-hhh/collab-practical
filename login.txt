@@ -1,1 +1,60 @@
-login feature added 
+
+Step 1: Create a Repository on GitHub
+1. Login to GitHub.
+2. Click on New Repository.
+3. Name the repository: collab-practical.
+4. Create the repository and copy the HTTPS URL.
+
+Step 2: Clone Repository to Local Machine
+git clone https://github.com/<your-username>/collab-practical.git
+cd collab-practical
+
+Step 3: Configure Git (First Time Only)
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+
+Step 4: Create a Branch and Push Code
+git checkout -b feature-login
+echo "Login feature added" > login.txt
+git add .
+git commit -m "Add login feature"
+git push origin feature-login
+
+Step 5: Create Pull Request (PR)
+1. Open the repository on GitHub.
+2. Click "Compare & pull request".
+3. Add title and description.
+4. Click "Create pull request".
+
+Step 6: Review and Merge PR
+1. Review changes in PR.
+2. Click "Merge pull request".
+3. Confirm merge.
+
+Step 7: Create a Merge Conflict (Practice)
+On main branch:
+git checkout main
+echo "Main branch change" > conflict.txt
+git add .
+git commit -m "Main branch change"
+git push origin main
+
+git checkout feature-login
+echo "Feature branch change" > conflict.txt
+git add .
+git commit -m "Feature branch change"
+git push origin feature-login
+
+Step 8: Resolve Merge Conflict (Locally)
+git checkout main
+git pull origin main
+git merge feature-login
+
+Edit conflict.txt to keep both changes:
+Main branch change
+Feature branch change
+Then:
+git add conflict.txt
+git commit -m "Resolve merge conflict"
+git push origin main
+
